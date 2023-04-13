@@ -1,1 +1,0 @@
-# Parcial-Narrativa-visual-de-la-l-nea-147
