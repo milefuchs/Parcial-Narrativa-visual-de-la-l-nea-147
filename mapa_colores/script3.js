@@ -28,7 +28,7 @@ Promise.all([mapaFetch, dataFetch]).then(([barrios, data]) => {
       // Quantize continuo (cant. denuncias) -> discreto (cant. colores)
       type: 'quantize', 
       n: 8,
-      scheme: 'ylgn', //ylorrd
+      scheme: 'ylorrd',//'ylgn', 
       label: 'Cantidad de denuncias',
       legend: true,
     },
@@ -42,7 +42,7 @@ Promise.all([mapaFetch, dataFetch]).then(([barrios, data]) => {
         barrios.features,
         Plot.centroid({
           text: (d) => d.properties.BARRIO,
-          fill: "currentColor",
+          fill: "black",
           stroke: "white",
           textAnchor: "center",
           dx: 4,

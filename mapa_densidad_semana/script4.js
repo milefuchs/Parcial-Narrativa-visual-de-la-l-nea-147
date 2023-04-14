@@ -1,4 +1,3 @@
-// config. fecha español
 d3.json('https://cdn.jsdelivr.net/npm/d3-time-format@3/locale/es-ES.json').then(locale => {
   d3.timeFormatDefaultLocale(locale)
 })
@@ -8,21 +7,24 @@ const dataFetch = d3.dsv(';', 'malestacionados.csv', d3.autoType)
 
 Promise.all([mapaFetch, dataFetch]).then(([barrios, data]) => {
   
-  /* Mapa Coroplético */
+  // Mapa Coroplético 
   let chartMap = Plot.plot({
-    // https://github.com/observablehq/plot#projection-options
     projection: {
       type: 'mercator',
-      domain: barrios, // Objeto GeoJson a encuadrar
+      domain: barrios, 
+      width: 5000,
+      heigth: 500,
     },
     color: {
       scheme: 'ylorrd',
     },
     marks: [
-      Plot.density(data, { x: 'lon', y: 'lat', fill: 'density',bandwidth: 2, thresholds: 30 }),
+      Plot.density(data, { x: 'lon', y: 'lat', fill: 'density',bandwidth: 2, thresholds: 30, width: 5000, heigth: 500 }),
       Plot.geo(barrios, {
         stroke: 'gray',
         title: d => `${d.properties.BARRIO}\n${d.properties.DENUNCIAS} denuncias`,
+        width: 5000,
+        heigth: 500,
       }),
     ],
     facet: {
@@ -32,9 +34,7 @@ Promise.all([mapaFetch, dataFetch]).then(([barrios, data]) => {
     fx: {
       domain: ['lun', 'mar', 'mié', 'jue', 'vie', 'sáb', 'dom']
     },
-    width: 1000
+    width: 1500,
   })
-
-  /* Agregamos al DOM la visualización chartMap */
   d3.select('#chart').append(() => chartMap)
 })
