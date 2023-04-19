@@ -22,6 +22,7 @@ Promise.all([mapaFetch, dataFetch]).then(([barrios, data]) => {
       Plot.density(data, { x: 'lon', y: 'lat', fill: 'density',bandwidth: 2, thresholds: 30, width: 5000, heigth: 500 }),
       Plot.geo(barrios, {
         stroke: 'gray',
+        opacity:0.4,
         title: d => `${d.properties.BARRIO}\n${d.properties.DENUNCIAS} denuncias`,
         width: 5000,
         heigth: 500,
@@ -32,7 +33,7 @@ Promise.all([mapaFetch, dataFetch]).then(([barrios, data]) => {
       x: d => d3.timeFormat('%a')(d3.timeParse('%d/%m/%Y')(d.fecha_ingreso)),
     },
     fx: {
-      domain: ['lun', 'mar', 'mié', 'jue', 'vie', 'sáb', 'dom']
+      domain: ['lun', 'mar', 'mié', 'jue', 'vie', 'sáb', 'dom'],
     },
     width: 1500,
   })
