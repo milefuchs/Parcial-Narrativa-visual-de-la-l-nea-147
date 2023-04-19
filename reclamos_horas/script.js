@@ -18,23 +18,39 @@ d3.dsv(';', 'malestacionados.csv', d3.autoType).then(data => {
     },
     color: {
       legend: true,
+      scheme: 'ylorrd'
     },
     marks: [
       Plot.rectY( 
         data,
         Plot.binX( 
           
-          { y: 'count', title: d => d[0].hora_ingreso, },
+          { y: 'count', fill: 'count', title: d => d[0].hora_ingreso,
+          },
           {
             x: d => d3.timeParse('%H:%M:%S')(d.hora_ingreso),
             // Agrupamos en intervalo de horas
-            thresholds: d3.timeHour,
-            fill: 'genero'
+            thresholds: d3.timeHour,        
+            
+            
           },
         ),
       ),
+      Plot.frame({ stroke: "#d3d3d3" })
     ],
-
+    facet: {
+      data: data,
+      x: d => d3.timeFormat('%a')(d3.timeParse('%d/%m/%Y')(d.fecha_ingreso)),
+      marginRight: 0,
+      marginLeft: 0
+    },
+    fx: {
+      domain: ['lun', 'mar', 'mié', 'jue', 'vie', 'sáb', 'dom'],
+      padding: 0.1,
+      insetLeft: 0,
+      insetRight: 0
+    },
+    width: 5000,
   })
   // Agregamos chart al div#chart de index.html
   d3.select('#chart').append(() => chart)

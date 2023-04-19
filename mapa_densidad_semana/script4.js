@@ -32,9 +32,11 @@ Promise.all([mapaFetch, dataFetch]).then(([barrios, data]) => {
       data: data,
       x: d => d3.timeFormat('%a')(d3.timeParse('%d/%m/%Y')(d.fecha_ingreso)),
     },
+    
     fx: {
       domain: ['lun', 'mar', 'mié', 'jue', 'vie', 'sáb', 'dom'],
     },
+
     width: 1500,
   })
   d3.select('#chart').append(() => chartMap)
