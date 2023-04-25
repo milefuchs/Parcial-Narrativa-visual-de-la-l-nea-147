@@ -18,7 +18,6 @@ d3.dsv(';', 'malestacionados.csv', d3.autoType).then(data => {
     },
     
     color: {
-      //range: ['#FFD93D','#FED976', ' #FEB24C', '#FD8D3C', '#FC4E2A','#E31A1C', '#B10026'],
       scheme: 'ylorrd',
       range:[0.1,1.1],
       legend: true,

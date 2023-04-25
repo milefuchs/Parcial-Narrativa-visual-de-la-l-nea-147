@@ -49,7 +49,6 @@ Promise.all([mapaFetch, dataFetch]).then(([barrios, data]) => {
       )
     ],
   })
-//#rgba(78, 30, 3, 0.959);
   /* Agregamos al DOM la visualización chartMap */
   d3.select('#chart_1').append(() => chartMap)
   
