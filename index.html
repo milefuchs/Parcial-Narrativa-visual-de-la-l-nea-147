@@ -9,126 +9,130 @@
 
     <link rel="stylesheet" href="styles/reset.css">
     <link rel="stylesheet" href="styles/styles.css">
-
   </head>
+  
+  <header>
+    <h1>Autos mal estacionados en CABA</h1>
+    <h2>Vale la pena salir en auto?</h2>  
+  </header>
+
+
    <body>
-    <header>
-      <h1>Autos mal estacionados en CABA</h1>
-      <h2>Vale la pena salir en auto?</h2>  
-    </header>
+    <h4> 
+      Es realmente la mejor opcion salir con el auto?
+      No deja de ser una realidad que la comodidad es una gran ventaja, pero cuando llega la hora de estacionar es en lo ultimo que pensamos.
+      Dejar el auto mal estacionado siempre es una opcion. Es un riesgo pero a veces es la solucion mas rapida.
+      Es por esto que decidimos usar una recoleccion de datos de la linea 147 para observar las denuncias de los autos
+      mal estacionados en la Ciudad de Buenos Aires. 
 
-
+    </h4>
     <section>
-
-    
-
-    <body style="background-color:white"></body>
-        <h3>Cantidad de denuncias en cada barrio</h3>
-        <p>
-            Lorem Ipsum is simply dummy text of the printing and typesetting industry.
-            Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
-            when an unknown printer took a galley of type and scrambled it to make a type
-            specimen book. It has survived not only five centuries, but also the leap into
-            electronic typesetting, remaining essentially unchanged. It was popularised in
-            the 1960s with the release of Letraset sheets containing Lorem Ipsum passages,
-            and more recently with desktop publishing software like Aldus PageMaker 
-            including versions of Lorem Ipsum.
-        </p>
-    
-         <iframe src = 'mapa_colores/index.html' scrolling="no" height="710" width="50%" frameborder = "0" style="border:none; margin:auto;" ></iframe>
-      
-        <p >
-          There are many variations of <em> passages of Lorem</em> Ipsum available, but the majority
-          have suffered alteration in some form, by injected humour, or randomised words 
-          which don't look even slightly believable. If you are going to use a passage of 
-          Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the
-          middle of text. 
-        </p>
-        
-        <br>
-        <br>
-        <br>
-        <br>
-      
-        <h3>There are many variations of passages</h3>
-        
-        <p>
-            Lorem Ipsum is simply dummy text of the printing and typesetting industry.
-            Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
-            when an unknown printer took a galley of type and scrambled it to make a type
-            specimen book. It has survived not only five centuries, but also the leap into
-            electronic typesetting, remaining essentially unchanged. It was popularised in
-            the 1960s with the release of Letraset sheets containing Lorem Ipsum passages,
-            and more recently with desktop publishing software like Aldus PageMaker 
-            including versions of Lorem Ipsum.
-        </p>
-        
-        <div style="margin-top: 25px;">
-        <iframe src = 'mapa_densidad_semana/index.html' scrolling="no" height="250" width="100%" frameborder = "0" ></iframe>
+      <body style="background-color:white"></body>
+      <h3>Cantidad de denuncias en cada barrio</h3>
+        <div class="contenedor-primer-grafico">
+          <p>
+            Este primer grafico es un mapa de la ciudad de Buenos Aires. Esta separado por barrios y cada barrio
+            tiene un color distinto. Cada color pertenece a una paleta de colores de dencidad que, cuanto mas oscuro, mas denso.
+            Y en este caso, cuanto mas oscuro, mas cantidad de denuncias hay en este barrio. 
+            A partir del mapa podemos observar que los barrios con mas denuncias de vehiculos mal estacionados son
+            Palermo en primer lugar, Villa Urquiza en segundo, Caballito en tercero, Belgrano en cuarto y Villa Soldati quinto. 
+            Como podemos observar, Palermo casi que duplica la cantidad de denuncias de Villa Urquiza por lo que decidimos
+            resaltarlo con un color negro, que no es parte de la paleta de colores.  Como observamos en el grafico, al ser palermo quien tiene mas denuncias
+            podemos concluir en que el gastronomico y comercial es cual trae mas trafico de autos. 
+            <br><br> There are many variations of <em> passages of Lorem</em> Ipsum available, but the majority
+            have suffered alteration in some form, by injected humour, or randomised words 
+            which don't look even slightly believable. If you are going to use a passage of 
+            Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the
+            middle of text. 
+          </p>
+           <iframe id="Iframe1" src = 'mapa_colores/index.html' scrolling="no" height="710" width="55%" ></iframe>
         </div>
-
-        <small>Contrary to popular belief, Lorem Ipsum is not simply random text.</small>
-
-        <br>
-        <br>
-        <br>
-        <br>
-
-        <h3>There are many variations of passages</h3>
+      
+          <p >
+            <i>El estacionamiento indebido puede causar congestión del tráfico, obstrucción de las vías 
+              peatonales, bloqueo de rampas de acceso y salidas de emergencia, y puede poner en riesgo la 
+              seguridad de peatones y conductores.
+            </i> 
+          </p>
+          
+          <br>
+          <br>
+          <br>
+          <br>
         
-        <p>
-            If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't 
-            anything embarrassing hidden in the middle of text. All the Lorem Ipsum generators 
-            on the Internet tend to repeat predefined chunks as necessary, making this the first 
-            true generator on the Internet. It uses a dictionary of over 200 Latin words, combined 
-            with a handful of model sentence structures, to generate Lorem Ipsum which looks reasonable.
-        </p>
-        
-        <div style="margin-top: 25px; margin-bottom: 25px" ></div>
-        <iframe src = 'reclamos_horas/index.html' height="550" width="100%" frameborder = "0"></iframe>
-      </div>
-
-        <p>
-            If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't 
-            anything embarrassing hidden in the middle of text. All the Lorem Ipsum generators 
-            on the Internet tend to repeat predefined chunks as necessary, making this the first 
-            true generator on the Internet. It uses a dictionary of over 200 Latin words, combined 
-            with a handful of model sentence structures, to generate Lorem Ipsum which looks reasonable.
-            If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't 
-            anything embarrassing hidden in the middle of text. All the Lorem Ipsum generators 
-            on the Internet tend to repeat predefined chunks as necessary, making this the first 
-            true generator on the Internet. It uses a dictionary of over 200 Latin words, combined 
-            with a handful of model sentence structures, to generate Lorem Ipsum which looks reasonable.
-            If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't 
-            anything embarrassing hidden in the middle of text. All the Lorem Ipsum generators 
-            on the Internet tend to repeat predefined chunks as necessary, making this the first 
-            true generator on the Internet. It uses a dictionary of over 200 Latin words, combined 
-            with a handful of model sentence structures, to generate Lorem Ipsum which looks reasonable.
-        </p>
-        
-        <br>
-        <br>
-        <br>
-        <br>
-   
-    <!--<h4>
-      <p>Fuente: Datos de la Linea 147</p>
-      <p>Autoras: Delfina Gallo y Milena Fuchs</p>
-    </h4>-->
-    
-  </section>
-
-
-    <footer>
-		<p>Fuente: Contactos por vehículos mal estacionados realizados a través de línea 147 al Sistema Único de Atención Ciudadana (SUACI) de la Ciudad de Buenos Aires en Enero del año 2021</p>
-    <p>Autoras: Delfina Gallo y Milena Fuchs</p>
-	  </footer> <!-- / #main-footer -->
-
-    <script src="https://cdn.jsdelivr.net/npm/d3@7"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@observablehq/plot@0.6"></script>
-    <script src="mapa_colores/script3.js"></script>
-    <script src="mapa_densidad_semana/script4.js"></script>
-
-
-  </body>
-</html>
+          <h3>Densidad promedio de denuncias por dia</h3>
+          
+          <p>
+              Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+              Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
+              when an unknown printer took a galley of type and scrambled it to make a type
+              specimen book. It has survived not only five centuries, but also the leap into
+              electronic typesetting, remaining essentially unchanged. It was popularised in
+              the 1960s with the release of Letraset sheets containing Lorem Ipsum passages,
+              and more recently with desktop publishing software like Aldus PageMaker 
+              including versions of Lorem Ipsum.
+          </p>
+          
+          <div style="margin-top: 25px;">
+          <iframe src = 'mapa_densidad_semana/index.html' scrolling="no" height="250" width="100%" frameborder = "0" ></iframe>
+          </div>
+  
+          <small>Contrary to popular belief, Lorem Ipsum is not simply random text.</small>
+  
+          <br>
+          <br>
+          <br>
+          <br>
+  
+          <h3>Cantidad de denuncias promedio por cada hora del dia</h3>
+          
+          <div style="margin-top: 25px; margin-bottom: 25px" ></div>
+          <iframe src = 'reclamos_horas/index.html' height="550" width="100%" frameborder = "0"></iframe>
+        </div>
+  
+          <p>
+              If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't 
+              anything embarrassing hidden in the middle of text. All the Lorem Ipsum generators 
+              on the Internet tend to repeat predefined chunks as necessary, making this the first 
+              true generator on the Internet. It uses a dictionary of over 200 Latin words, combined 
+              with a handful of model sentence structures, to generate Lorem Ipsum which looks reasonable.
+              If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't 
+              anything embarrassing hidden in the middle of text. All the Lorem Ipsum generators 
+              on the Internet tend to repeat predefined chunks as necessary, making this the first 
+              true generator on the Internet. It uses a dictionary of over 200 Latin words, combined 
+              with a handful of model sentence structures, to generate Lorem Ipsum which looks reasonable.
+              If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't 
+              anything embarrassing hidden in the middle of text. All the Lorem Ipsum generators 
+              on the Internet tend to repeat predefined chunks as necessary, making this the first 
+              true generator on the Internet. It uses a dictionary of over 200 Latin words, combined 
+              with a handful of model sentence structures, to generate Lorem Ipsum which looks reasonable.
+          </p>
+          
+          <br>
+          <br>
+          <br>
+          <br>
+     
+      <!--<h4>
+        <p>Fuente: Datos de la Linea 147</p>
+        <p>Autoras: Delfina Gallo y Milena Fuchs</p>
+      </h4>-->
+      
+    </section>
+  
+  
+      <footer>
+      <p><b>Fuente:</b> Contactos por vehículos mal estacionados realizados a través de línea 147 al Sistema Único de Atención Ciudadana (SUACI) de la Ciudad de Buenos Aires en Enero del año 2021.</p>
+      <p><b>Autoras:</b> Delfina Gallo y Milena Fuchs.</p>
+      <p><b>Metodología:</b> .</p>
+      </footer> <!-- / #main-footer -->
+  
+      <script src="https://cdn.jsdelivr.net/npm/d3@7"></script>
+      <script src="https://cdn.jsdelivr.net/npm/@observablehq/plot@0.6"></script>
+      <script src="mapa_colores/script3.js"></script>
+      <script src="mapa_densidad_semana/script4.js"></script>
+  
+  
+    </body>
+  </html>
+  
