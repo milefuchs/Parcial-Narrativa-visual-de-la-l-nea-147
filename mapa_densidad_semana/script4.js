@@ -37,6 +37,10 @@ Promise.all([mapaFetch, dataFetch]).then(([barrios, data]) => {
       domain: ['lun', 'mar', 'mié', 'jue', 'vie', 'sáb', 'dom'],
     },
 
+    style: {
+      fontSize: "18px",
+    },
+
     width: 1500,
   })
   d3.select('#chart').append(() => chartMap)

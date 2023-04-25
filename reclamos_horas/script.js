@@ -16,9 +16,13 @@ d3.dsv(';', 'malestacionados.csv', d3.autoType).then(data => {
       grid: true,
       label: 'Cantidad de denuncias',
     },
+    
     color: {
+      //range: ['#FFD93D','#FED976', ' #FEB24C', '#FD8D3C', '#FC4E2A','#E31A1C', '#B10026'],
+      scheme: 'ylorrd',
+      range:[0.1,1.1],
       legend: true,
-      scheme: 'ylorrd'
+      legendFormat: "Denuncias",
     },
     marks: [
       Plot.rectY( 
@@ -50,8 +54,15 @@ d3.dsv(';', 'malestacionados.csv', d3.autoType).then(data => {
       insetLeft: 0,
       insetRight: 0
     },
+    style: {
+      fontSize: "15px",
+    },
+
     width: 5000,
   })
+
   // Agregamos chart al div#chart de index.html
   d3.select('#chart').append(() => chart)
+  
 })
+

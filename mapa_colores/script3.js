@@ -21,17 +21,18 @@ Promise.all([mapaFetch, dataFetch]).then(([barrios, data]) => {
       domain: barrios, // Objeto GeoJson a encuadrar
     },
     color: {
-      // Quantize continuo (cant. denuncias) -> discreto (cant. colores)
       type: 'quantize', 
       n: 8,
-      scheme: 'ylorrd',//'ylgn', 
+      scheme: 'ylorrd',
       label: 'Cantidad de denuncias',
-      //transform: (d) => d.properties.DENUNCIAS>700,
       legend: true,
     },
     marks: [
       Plot.geo(barrios, {
-        fill: d => d.properties.BARRIO != 'PALERMO'? d.properties.DENUNCIAS: 'black', //>800? 'green':, 
+        fill: d => d.properties.BARRIO != 'PALERMO'? d.properties.DENUNCIAS: 'transparent',
+      }),
+      Plot.geo(barrios, {
+        fill: d => d.properties.BARRIO == 'PALERMO'? '#000000':'transparent',
         stroke: 'gray',
         title: d => `${d.properties.BARRIO}\n${d.properties.DENUNCIAS} denuncias`,
       }),
@@ -48,7 +49,7 @@ Promise.all([mapaFetch, dataFetch]).then(([barrios, data]) => {
       )
     ],
   })
-
+//#rgba(78, 30, 3, 0.959);
   /* Agregamos al DOM la visualización chartMap */
   d3.select('#chart_1').append(() => chartMap)
   
